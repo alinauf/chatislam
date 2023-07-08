@@ -183,6 +183,7 @@ const theme = createTheme({
     primaryCardBackground: palette.White,
     primaryCardText: palette.Blue900,
     dimText: palette.Slate500,
+    dimBorder: palette.Slate200,
   },
   spacing: {
     xxs: 2,
@@ -234,14 +235,39 @@ const theme = createTheme({
       fontWeight: '500',
       color: 'dimText',
     },
+    smallLabel: {
+      fontSize: 12,
+      lineHeight: 18,
+      fontWeight: '400',
+      color: 'Black700',
+    },
+    largeLabel: {
+      fontSize: 16,
+      lineHeight: 24,
+      fontWeight: '500',
+      color: 'Black700',
+    },
     defaults: {
       fontSize: 14,
       lineHeight: 18,
       fontWeight: '500',
       color: 'mainForeground',
     },
+    question: {
+      fontSize: 18,
+      lineHeight: 18,
+      fontWeight: '500',
+      color: 'mainForeground',
+    },
+    answer: {
+      fontSize: 18,
+      lineHeight: 24,
+      fontWeight: '400',
+      color: 'Gray800',
+    },
   },
 });
 
+export type ColorProp = keyof Theme['colors'];
 export type Theme = typeof theme;
 export default theme;
